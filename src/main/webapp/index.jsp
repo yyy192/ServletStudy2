@@ -20,7 +20,7 @@
 	<p>
 		<a href="/ServletStudy2/bankbook/bankbookList.do">Bankbook List</a><br>
 		<a href="./bankbook/bankbookInsert.do">Bankbook Insert</a><br>
-		<a href="bankbook/bankbookSelect.do?bookNumber=2">Bankbook Select</a>
+		<a href="bankbook/bankbookSelect.do?bookNumber=5">Bankbook Select</a>
 	</p>
 	
 </body>
