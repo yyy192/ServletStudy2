@@ -28,6 +28,7 @@ public class BankBookController {
 		
 		path = uris[3];
 		
+/**     LIST                                            **/
 		if(path.equals("bankbookList.do")) {
 			System.out.println("상품 목록");
 			ArrayList<BankBookDTO> ar = bankBookDAO.getList();
@@ -59,9 +60,54 @@ public class BankBookController {
 			e.printStackTrace();
 		}
 		
+		
+/**     INSERT                                             **/
 		}else if(path.equals("bankbookInsert.do")) {
 			System.out.println("상품 등록");
-		}else if(path.equals("bankbookSelect.do")) {
+			
+			String method = request.getMethod();
+			System.out.println("METHOD : "+method);
+			
+			if(method.equals("POST")) {
+
+				String bookName = request.getParameter("bookName");
+				String bookRate = request.getParameter("bookRate");
+				String bookUse = request.getParameter("bookUse");
+				
+				BankBookDTO bankbookDTO = new BankBookDTO();
+				bankbookDTO.setBookName(bookName);
+				bankbookDTO.setBookRate(Double.parseDouble(bookRate));
+				bankbookDTO.setBookUse(Integer.parseInt(bookUse));
+				
+				int result = bankBookDAO.setInsert(bankbookDTO);
+				System.out.println(result);
+				
+//				ArrayList<BankBookDTO> ar = bankBookDAO.getList();
+//				request.setAttribute("list", ar);
+				
+				try {
+					response.sendRedirect("./bankbookList.do");
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else{
+				
+				RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookInsert.jsp");
+				
+				try {
+					view.forward(request, response);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} //if-else문 끝
+			
+				
+/**     SELECT                                             **/	
+		}else  if(path.equals("bankbookSelect.do")) {
+		
 			System.out.println("상품 상세조회");
 			String num = request.getParameter("bookNumber");
 			long booknumber = Long.parseLong(num);

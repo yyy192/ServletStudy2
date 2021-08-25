@@ -13,7 +13,7 @@
 	
 	<table>
 		<tr>
-			<th>일련번호</th><th>제품명</th><th>이자율</th><th>사용여부(1-O, 0-X)</th>
+			<th>일련번호</th><th>제품명</th><th>이자율</th><th>판매여부(1-O, 0-X)</th>
 		</tr>
 	<%
 	Object obj = request.getAttribute("list");
@@ -25,7 +25,7 @@
 	
 	<tr>
 		<td><%= dto.getBookNumber() %></td>
-		<td><a href="./bankbookSelect.do?bookNumber=<%= dto.getBookNumber()%>"><%= dto.getBookName() %></td>
+		<td><a href="./bankbookSelect.do?bookNumber=<%= dto.getBookNumber()%>"><%= dto.getBookName() %></a></td>
 		<td><%= dto.getBookRate() %></td>
 		<td><%= dto.getBookUse() %></td>
 	
@@ -41,5 +41,7 @@
 	}
 	%>
 	</table>
+	
+	<a href="./bankbookInsert.do">Write</a>
 </body>
 </html>

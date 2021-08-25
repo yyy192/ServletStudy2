@@ -19,7 +19,7 @@
 	<h3>BookNumber : <%= num %></h3>
 	<h3>BookName : <%= bankBookDTO.getBookName() %></h3>
 	<h3>BookRate : <%= bankBookDTO.getBookRate() %></h3>
-	<h3>BookRate : <%= bankBookDTO.getBookRate() %></h3>
+	<h3>BookUse : <%= bankBookDTO.getBookUse() %></h3>
 	
 </body>
 </html>
