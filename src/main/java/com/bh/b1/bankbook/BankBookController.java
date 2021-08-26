@@ -7,6 +7,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class BankBookController {
 
@@ -121,6 +122,12 @@ public class BankBookController {
 			System.out.println("BOOKNAME   : "+bankBookDTO.getBookName());
 			
 			request.setAttribute("dto", bankBookDTO);
+			request.setAttribute("count", 506);
+			request.setAttribute("name", "BAEKHUYN");
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("se", "session");
+			request.setAttribute("se", "request");
 			
 			RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookSelect.jsp");
 			try {

@@ -9,23 +9,18 @@
 </head>
 <body>
 	<h1>BankBook Select Page</h1>
-	<!-- java영역 -->
-	<% 
 	
-	/* 	session
-		application (ServletContext가 아님)
-		page        (ServletConfig가 아님)
-		pageContext */
-		
-		String num = request.getParameter("bookNumber");
-		Object obj = request.getAttribute("dto");
-		BankBookDTO bankBookDTO = (BankBookDTO)obj;
-	%>
+	<!-- EL표현 사용 -->
+	<h3>BookNumber : ${dto.bookNumber}</h3>
+	<h3>BookName : ${requestScope.dto.bookName}</h3>
+	<h3>BookRate : ${requestScope.dto.bookRate}</h3>
+	<h3>BookUse : ${requestScope.dto.bookUse}</h3>
+	<h3>NAME : ${requestScope.name}</h3>
+	<h3>COUNT : ${count}</h3>
+	<h3>SE : ${sessionScope.se}</h3>
+	<h3>SE : ${se}</h3>
 	
-	<h3>BookNumber : <%= num %></h3>
-	<h3>BookName : <%= bankBookDTO.getBookName() %></h3>
-	<h3>BookRate : <%= bankBookDTO.getBookRate() %></h3>
-	<h3>BookUse : <%= bankBookDTO.getBookUse() %></h3>
+	
 	
 </body>
 </html>
