@@ -11,6 +11,12 @@
 	<h1>BankBook Select Page</h1>
 	<!-- java영역 -->
 	<% 
+	
+	/* 	session
+		application (ServletContext가 아님)
+		page        (ServletConfig가 아님)
+		pageContext */
+		
 		String num = request.getParameter("bookNumber");
 		Object obj = request.getAttribute("dto");
 		BankBookDTO bankBookDTO = (BankBookDTO)obj;
