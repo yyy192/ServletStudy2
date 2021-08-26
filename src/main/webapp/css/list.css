@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#t1{
+	border-bottom-color: pink;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	
+	border-left-color: pink;
+	border-left-width: 3px;
+	border-left-style: double;
+	
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+#t2{
+	border-bottom-color: pink;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	
+	border-left-color: pink;
+	border-left-width: 3px;
+	border-left-style: dashed;
+	
+	border-right-color: pink;
+	border-right-width: 3px;
+	border-right-style: double;
+	
+	border-spacing: 0px;
+}
+#t3{
+	border-top-color: pink;
+	border-top-width: 3px;
+	border-top-style: solid;
+	
+	border-spacing: 0px;
+}
+.c1{
+	border-bottom-color: pink;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	
+	border-left-color: pink;
+	border-left-width: 3px;
+	border-left-style: dashed;
+	
+	border-spacing: 0px;
+	
+/* 	border-right-color: pink;
+	border-right-width: 3px;
+	border-right-style: dashed; */
+	
+}
