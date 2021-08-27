@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#title {
+	color: orange;
+}
+
+.c1 {
+	border: red 2px solid;
+	/* background-color: red; */
+	width: 300px;
+	height: 300px;
+	
+/* 
+	padding-top: 30px;
+	padding-left: 30px; 
+	padding-right: 30px;
+*/
+	box-sizing: border-box;
+	
+	padding: 96px;
+	
+	
+}
+
+.c1_1 {
+	
+	width: 100px;
+	height: 100px;
+	border: gray 2px solid;
+	/* background-color: gray; */
+	
+}
+
+.c2 {
+	
+	border: blue 2px solid;
+	
+/* 	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px; 
+	
+	padding: 20px 20px 20px 20px; 
+	padding: 20px 30px;
+*/
+	padding: 40px;
+}

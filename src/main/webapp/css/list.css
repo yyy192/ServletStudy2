@@ -33,7 +33,20 @@
 	border-top-style: solid;
 	
 	border-spacing: 0px;
+	
+	width: 70%;
+	
+	margin: 0 auto;	
 }
+
+#t4 {
+	width : 70%;
+	
+	margin: 0 auto;	
+	background-color: yellow;
+	text-align: center;
+}
+
 .c1{
 	border-bottom-color: pink;
 	border-bottom-width: 3px;
@@ -49,4 +62,12 @@
 	border-right-width: 3px;
 	border-right-style: dashed; */
 	
+	margin: 0 auto;
+	
+}
+
+.list {
+	
+	width: 100px;
+	height: 100px;
 }

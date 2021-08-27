@@ -27,7 +27,7 @@ h1{
 	border-right-style: dashed;
 	
 	/* border-bottom */
-	border-bottom: purple dotted 3px;
+	border-bottom: rgb(128, 0, 255) dotted 3px;
 	
 }
 /* #t3, h2{
